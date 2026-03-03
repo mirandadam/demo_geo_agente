@@ -14,9 +14,24 @@
     <div id="app">
       <div id="map-container">
         <div id="map"></div>
+        <div id="popup" class="ol-popup">
+          <button id="popup-close">&times;</button>
+          <div id="popup-content"></div>
+        </div>
       </div>
       <div id="chat-container">
-        <div id="chat-header">Agente Geo IBGE</div>
+        <div id="chat-header">
+          <span>Agente Geo IBGE</span>
+          <button id="chat-clear" title="Nova conversa">Nova conversa</button>
+        </div>
+        <div id="layer-panel">
+          <div id="layer-panel-header">
+            <span>Camadas ativas</span>
+            <span id="layer-count">0</span>
+            <button id="layer-panel-toggle" title="Expandir/recolher">▼</button>
+          </div>
+          <div id="layer-list"></div>
+        </div>
         <div id="chat-messages"></div>
         <div id="chat-input-area">
           <input
@@ -30,6 +45,7 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/ol@10.5.0/dist/ol.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
